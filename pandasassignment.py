@@ -55,6 +55,7 @@ species['Flower.Size'] = species.apply(size_check, axis=1)
 print("Exercise 9: Applying Custom Functions\n")
 print("custom function that categorizes flowers as small, medium, or large based on petal length\n")
 print(species)
+print(species)gugi
 
 
 
