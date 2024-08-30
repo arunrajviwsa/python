@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 df=pd.read_csv("iris_csv.csv")
+dv=pd.read_csv("iris_csv.csv")
 print("*"*30,"Exercise 1: Load and Inspect the Data\n","*"*30)
 print("1.Loading data from Csv\n",df)
 print("2.First 10 records from Csv\n",df.head(10))
@@ -25,7 +26,9 @@ print(f"species with the highest average sepal width: {highest_average.idxmax()}
 df.ratio = df["Petal.Length"]/df["Petal.Width"]
 print(df.ratio)
 print("*"*30,"Exercise 6: Data Transformation","*"*30)
-
+data1 = pd.DataFrame(df)
+#df_normalized = (data1-data1.min()) / (data1.max()-data1.min())
+#print("Normalize the numerical features (sepal length, sepal width, petal length, petal width) to a range of 0 to 1.\n",df_normalized)
 data = df.assign(ratio=df["Petal.Length"]/df["Petal.Width"])
 print(data)
 print("*"*30,"Exercise 7: Advanced Data Aggregation","*"*30)
@@ -55,7 +58,6 @@ species['Flower.Size'] = species.apply(size_check, axis=1)
 print("Exercise 9: Applying Custom Functions\n")
 print("custom function that categorizes flowers as small, medium, or large based on petal length\n")
 print(species)
-print(species)gugi
 
 
 
